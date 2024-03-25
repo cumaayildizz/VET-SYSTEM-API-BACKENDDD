@@ -11,8 +11,9 @@ public class WebConfig implements WebMvcConfigurer {
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**")
-                .allowedOrigins("*") // React uygulamanızın çalıştığı port
-                .allowedMethods("GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS");
+                .allowedOrigins("https://incredible-zabaione-7d37c0.netlify.app/") // React uygulamanızın çalıştığı port
+                .allowedMethods("GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS")
+                .allowCredentials(true);
 
     }
 }
